@@ -1,0 +1,28 @@
+.container {
+    background-color: white;
+    padding-left: 84px;
+    padding-right: 84px;
+    padding-top : 42px;
+}
+
+.mainBody{
+    display: flex;
+    margin-top: 73px;
+}
+
+.eventDetails{
+    width: 70%;
+    min-height: 800px;
+    max-height: 800px;
+    overflow-y: auto;
+    margin-right: 56px;
+}
+
+.calendar{
+    width: 30%;
+    min-height: 800px;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color : black !important;
+}

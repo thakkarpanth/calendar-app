@@ -1,0 +1,83 @@
+    [
+        {
+            "author": "Khoi Vinh",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Khoi Vinh",
+            "category" : "Design",     
+            "date" : "04-08-2021"
+        },
+        {
+            "author": "Panth Thakkar",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Panth Thakkar",
+            "category" : "Design",
+            "date" : "13-08-2021"    
+        },
+        {
+            "author": "Raj Shah ",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Raj Shah",
+            "category" : "Design",
+            "date" : "13-08-2021"    
+        },
+        {
+            "author": "Bhavin Patel",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Bhavin",
+            "category" : "Design" ,
+            "date" : "14-08-2021"   
+        },
+        {
+            "author": "Zankrut Thakkar",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Zankrut",
+            "category" : "Design",
+            "date" : "15-08-2021"    
+        },
+        {
+            "author": "Pujan Lalpurwala",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Pujan ",
+            "category" : "Product Management" ,
+            "date" : "16-08-2021"   
+        },
+        {
+            "author": "Jay Luhar",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Jay Luhar",
+            "category" : "Mindfulness"  ,
+            "date" : "17-08-2021"  
+        },
+        {
+            "author": "Semal Serathia",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Semal Serathia",
+            "category" : "Productivity",
+            "date" : "18-08-2021"    
+        },
+        {
+            "author": "Kartik Prajapati",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": "3",
+            "title" : "Artisanal Intelligence by Kartik Prajapati",
+            "category" : "Mental Health"  ,
+            "date" : "19-08-2021"  
+        }
+    ]

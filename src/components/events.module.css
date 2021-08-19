@@ -1,0 +1,35 @@
+.dateHeader{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.cardWrapper{
+    display: flex;
+    margin: 24px;
+    margin-left : 0;
+    cursor: pointer;
+}
+
+.eventDetails{
+    margin-left: 24px;
+}
+
+.attendanceBlock{
+    display: flex;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.cardHeader{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+
+.cardTimings{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 12px;
+}
