@@ -11,7 +11,7 @@
 }
 
 .eventDetails{
-    width: 70%;
+    width: 75%;
     min-height: 85vh;
     max-height: 85vh;
     overflow-y: auto;
@@ -19,9 +19,10 @@
 }
 
 .calendar{
-    width: 30%;
+    width: 25%;
     min-height: 85vh;
     max-height: 85vh;
+    /* max-width: 400px; */
 }
 
 .react-calendar__month-view__days__day--weekend {

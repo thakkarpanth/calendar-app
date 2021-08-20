@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
         <div className={styles.cardWrapper}>
             <div style={props.event.registered ? { borderBottom: '1px solid #EAEAEA' } : {}} className={styles.cardContainer}>
-                <img height="108px" width="144px" src={props.event.img} alt="" />
+                <img height="108px" width="144px" src={props.event.img} alt="author" />
                 <div className={styles.eventDetails}>
                     <div className={styles.cardHeader}>{props.event.title}</div>
                     <div className={styles.cardTimings}>{props.event.timings}</div>
@@ -18,9 +18,9 @@ const Card = (props) => {
                                 REGISTERED
                             </div> :
                             <div className={styles.attendanceBlock}>
-                                {props.event.attending ? <img style={{ marginRight: '8px' }} src="icons/attending.svg" alt="" /> : null}
+                                {props.event.attending ? <img style={{ marginRight: '8px' }} src="icons/attending.svg" alt="attendance icon" /> : null}
                                 <div style={{ marginRight: '32px' }}>{props.event.attending}</div>
-                                {props.event.seatsLeft > 3 ? <img style={{ marginRight: '8px' }} src="icons/seats.svg" /> : <img style={{ marginRight: '8px' }} src="icons/seatsActive.svg" alt="" />}
+                                {props.event.seatsLeft > 3 ? <img style={{ marginRight: '8px' }} src="icons/seats.svg" alt="seats icon" /> : <img style={{ marginRight: '8px' }} src="icons/seatsActive.svg" alt="seats icon" />}
                                 <div>{props.event.seatsLeft} seats left </div>
                             </div>
                     }
@@ -39,7 +39,6 @@ function Events(props) {
             groupBy[event.date] = [event];
         }
     })
-    console.log('z1 props ', props.loading);
     return (
         <div>
             {
@@ -64,12 +63,12 @@ function Events(props) {
                         </div>
                     </> :
                     <>
-                        {(Object.keys(groupBy).length == 0 || (Object.keys(groupBy).length && moment(Object.keys(groupBy)[0], 'DD-MM-YYYY').format('LL') != moment(props.date, 'DD-MM-YYYY').format('LL'))) ? <div className={styles.noEvent}>No sessions scheduled for {moment(props.date, 'DD-MM-YYYY').format('LL')}</div> : null}
+                        {(Object.keys(groupBy).length === 0 || (Object.keys(groupBy).length && moment(Object.keys(groupBy)[0], 'DD-MM-YYYY').format('LL') !== moment(props.date, 'DD-MM-YYYY').format('LL'))) ? <div className={styles.noEvent}>No sessions scheduled for {moment(props.date, 'DD-MM-YYYY').format('LL')}</div> : null}
                         {
                             Object.keys(groupBy).map((key, index) => {
                                 return (
                                     <>
-                                        <div style={index == 0 ? {} : { marginTop: '36px' }} className={styles.dateHeader}>{moment(key, 'DD-MM-YYYY').format('LL')}</div>
+                                        <div style={index === 0 ? {} : { marginTop: '36px' }} className={styles.dateHeader}>{moment(key, 'DD-MM-YYYY').format('LL')}</div>
                                         {
                                             groupBy[key].map(event => <Card event={event} key={event.id} />)
                                         }
