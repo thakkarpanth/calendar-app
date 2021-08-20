@@ -7,20 +7,21 @@
 
 .mainBody{
     display: flex;
-    margin-top: 73px;
+    margin-top: 68px;
 }
 
 .eventDetails{
     width: 70%;
-    min-height: 800px;
-    max-height: 800px;
+    min-height: 85vh;
+    max-height: 85vh;
     overflow-y: auto;
     margin-right: 56px;
 }
 
 .calendar{
     width: 30%;
-    min-height: 800px;
+    min-height: 85vh;
+    max-height: 85vh;
 }
 
 .react-calendar__month-view__days__day--weekend {

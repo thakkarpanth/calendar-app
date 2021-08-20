@@ -1,83 +1,141 @@
     [
         {
+            "id" : 1,
             "author": "Khoi Vinh",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Khoi Vinh",
             "category" : "Design",     
-            "date" : "04-08-2021"
+            "date" : "04-08-2021",
+            "registered" : false,
+            "status" : "Filling Fast",
+            "img" : "icons/author1.svg"
         },
         {
+
+            "id" : 2,
             "author": "Panth Thakkar",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Panth Thakkar",
             "category" : "Design",
-            "date" : "13-08-2021"    
+            "date" : "13-08-2021",   
+            "registered" : true,
+            "status" : "Available",
+            "img" : "icons/author2.svg"
+
         },
         {
+
+            "id" : 3,
             "author": "Raj Shah ",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 33,
             "title" : "Artisanal Intelligence by Raj Shah",
             "category" : "Design",
-            "date" : "13-08-2021"    
+            "date" : "13-08-2021" ,
+            "registered" : false,
+            "status" : "Block",
+            "img" : "icons/author3.svg"
+
         },
         {
+
+            "id" : 4,
             "author": "Bhavin Patel",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Bhavin",
             "category" : "Design" ,
-            "date" : "14-08-2021"   
+            "date" : "14-08-2021" ,
+            "registered" : true,
+            "status" : "Filling Fast",
+            "img" : "icons/author4.svg"
+
         },
         {
+            "id" : 5,
             "author": "Zankrut Thakkar",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Zankrut",
             "category" : "Design",
-            "date" : "15-08-2021"    
+            "date" : "15-08-2021" ,
+            "registered" : false,
+            "status" : "Available",
+            "img" : "icons/author5.svg"
+
         },
         {
+            "id" : 6,
             "author": "Pujan Lalpurwala",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Pujan ",
             "category" : "Product Management" ,
-            "date" : "16-08-2021"   
+            "date" : "16-08-2021",
+            "registered" : true,
+            "status" : "Block",
+            "img" : "icons/author6.svg"
+            
         },
         {
+            "id" : 7,
             "author": "Jay Luhar",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Jay Luhar",
             "category" : "Mindfulness"  ,
-            "date" : "17-08-2021"  
+            "date" : "17-08-2021",
+            "registered" : false,
+            "status" : "Filling Fast",
+            "img" : "icons/author1.svg"
+
         },
         {
+            "id" : 8,
             "author": "Semal Serathia",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 133,
             "title" : "Artisanal Intelligence by Semal Serathia",
             "category" : "Productivity",
-            "date" : "18-08-2021"    
+            "date" : "18-08-2021" ,
+            "registered" : true,
+            "status" : "Available",
+            "img" : "icons/author2.svg"
         },
         {
+            "id" : 9,
             "author": "Kartik Prajapati",
             "timings": "8:30PM - 9:30 PM IST  •  45 mins",
             "attending": "112 attending",
-            "seatsLeft": "3",
+            "seatsLeft": 6,
             "title" : "Artisanal Intelligence by Kartik Prajapati",
             "category" : "Mental Health"  ,
-            "date" : "19-08-2021"  
+            "date" : "19-08-2021" ,
+            "registered" : false,
+            "status" : "Block",
+            "img" : "icons/author3.svg"
+        },
+        {
+            "id" : 10,
+            "author": "Aneri Shah",
+            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "attending": "112 attending",
+            "seatsLeft": 6,
+            "title" : "Artisanal Intelligence by Aneri Shah",
+            "category" : "Mental Health"  ,
+            "date" : "19-07-2021" ,
+            "registered" : false,
+            "status" : "Block",
+            "img" : "icons/author4.svg"
         }
     ]

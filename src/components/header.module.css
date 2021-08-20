@@ -25,6 +25,9 @@
     padding: 5px 12px;
     cursor: pointer;
     margin-right: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .buttonActive{
@@ -38,6 +41,9 @@
 
 .menuItem {
     display: flex;
+    width: 100%;
+    min-width: 175px;
+    align-items: center;
 }
 .modifiedItem:hover {
     background-color: white !important;

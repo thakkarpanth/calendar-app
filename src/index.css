@@ -1,7 +1,7 @@
 
-.react-calendar__month-view__days__day--weekend {
+/* .react-calendar__month-view__days__day--weekend {
     color : black !important;
-}
+} */
 
 
 .highlight {
@@ -10,6 +10,11 @@
     height: 35px !important;
     width: 35px !important;
 }
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: black !important;
+    border-color: black !important;
+  }
 
 /* .normal {
     height: 35px !important;

@@ -2,17 +2,33 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
+    padding-left: 33px;
+    /* margin-top: 72px; */
 }
 
 .cardWrapper{
-    display: flex;
-    margin: 24px;
     margin-left : 0;
+    display: flex;
     cursor: pointer;
+    padding : 24px 33px;
+    margin-top: 24px;
+    padding-bottom: 0;
 }
 
+.cardContainer{
+    display: flex;
+    padding-bottom: 24px;
+    width: 100%;    
+}
+.cardWrapper:hover{
+    background-color:  #FAFAFA;
+    border-radius: 12px;
+}
 .eventDetails{
     margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .attendanceBlock{
@@ -32,4 +48,24 @@
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 12px;
+}
+
+.registeredButton{
+    border-radius: 22px;
+    background-color:  #444444;
+    color: #F2F2F2;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    padding: 2px 12px;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.noEvent{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #999999;
+    margin-left: 33px;
+    margin-bottom: 36px;
 }
