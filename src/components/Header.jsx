@@ -10,7 +10,7 @@ function Header(props) {
     const [localFilters , setLocalFilters] = React.useState([]);
 
     const handleTagChange = (tag) => {
-        if (props.tag === tag) props.setTag(null);
+        if (props.tag === tag) props.setTag('');
         else props.setTag(tag);
     }
 
@@ -78,15 +78,6 @@ function Header(props) {
                 <Dropdown visible={showMenu} overlay={menu} onClick={(e) => { setShowMenu(!showMenu) }} >
                     <div className={styles.buttonActive} style={{ border: '1px solid #EAEAEA' }}>Seats</div>
                 </Dropdown>
-                {/* <Popover
-                    content={renderFilterOptions()}
-                    trigger="click"
-                    overlayInnerStyle={{ maxHeight: '500px', overflow: 'auto', borderRadius: '8px' }}
-                    visible={showEdit}
-                    onVisibleChange={handleShowEdit}
-                >
-                    <div className={styles.buttonActive} style={{ border: '1px solid #EAEAEA'}}>Seats</div>
-                </Popover> */}
                 <div style={{ marginRight: '8px', width: '1px', height: '32px', backgroundColor: '#EAEAEA' }}></div>
                 <div onClick={() => handleTagChange('Design')} className={props.tag === 'Design' ? styles.buttonActive : styles.button}>Design</div>
                 <div onClick={() => handleTagChange('Product Management')} className={props.tag === 'Product Management' ? styles.buttonActive : styles.button}>Product Management</div>
@@ -98,9 +89,8 @@ function Header(props) {
 
             <div className={styles.searchWrapper}>
                 <img style={{ paddingLeft: '10px' }} src="icons/searchIcon.svg" alt="" />
-                <Input onChange={handleSearch} bordered={false} placeholder="search" />
+                <Input onChange={handleSearch} bordered={false} placeholder="Search" />
             </div>
-            {/* <Input.Search placeholder="Search"  style={{ width: 240 }} /> */}
         </div>
     )
 }

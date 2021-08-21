@@ -11,21 +11,29 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 
 
 function Home() {
-    const [tag, setTag] = React.useState(null);
+    const [tag, setTag] = React.useState('');
     const [searchText, setSearchText] = React.useState('');
     const [seatFilter, setSeatFilter] = React.useState([]);
-    const [filteredData, setFilteredData] = React.useState([]);
+    // const [filteredData, setFilteredData] = React.useState([]);
     const [date, setDate] = React.useState(new Date());
     const [eventDates, setEventDates] = React.useState([]);
     const [loading , setLoading] = React.useState(false);
     const [data , setData] = React.useState([]);
+    const [page , setPage] = React.useState(0); 
+    const [count , setCount] = React.useState(0);
 
-    const fetchEvents = async () => {
+    const fetchEvents = async (pageParam = page) => {
         try{
             setLoading(true);
-            const response = await fetch(`http://localhost:8080/api/events?search=${searchText}`);
-            const events  = (await response.json()).data;
-            setData(events || []);
+            const response = await fetch(`http://localhost:8080/api/events?search=${searchText}&date=${date}&seatFilter=${seatFilter.join(',')}&tag=${tag}&page=${pageParam}`);
+            const resJson = await response.json(); 
+            
+            
+            if(pageParam === 0)
+                setData(resJson.data || []);
+            else 
+                setData([... data , ... resJson.data || []])
+            setCount(resJson.count);
             setLoading(false);
         } 
         catch(e){
@@ -44,29 +52,35 @@ function Home() {
         }
     }
 
-    const filterData = async () => {
-        setLoading(true); 
-        const timeStamp = moment(new Date(date).toISOString()).unix();
-        let tempData = data.filter(event => ((date ? moment(event.date, 'DD-MM-YYYY').unix() >= timeStamp : true)  && (seatFilter.length === 0 ? true : seatFilter.includes(event.status)) && (tag ? event.category === tag : true)));
-        setFilteredData(tempData);
-        setLoading(false);
-    }
+    // const filterData = async () => {
+    //     setLoading(true); 
+    //     const timeStamp = moment(new Date(date).toISOString()).unix();
+    //     let tempData = data.filter(event => ((date ? moment(event.date, 'DD-MM-YYYY').unix() >= timeStamp : true)  && (seatFilter.length === 0 ? true : seatFilter.includes(event.status)) && (tag ? event.category === tag : true)));
+    //     setFilteredData(tempData);
+    //     setLoading(false);
+    // }
 
     React.useEffect(()=>{
-        fetchEvents();
-    }, [searchText])
+        fetchEvents(0);
+        setPage(0); 
+    }, [date, searchText, tag, seatFilter])
 
-    React.useEffect(()=>{
-        filterData();
-    },[data])
+    // React.useEffect(()=>{
+    //     filterData();
+    // },[data])
 
     React.useEffect(()=>{
         getDates();
     },[])
 
-    React.useEffect(() => {
-        filterData();
-    }, [date, searchText, tag, seatFilter])
+    // React.useEffect(() => {
+    //     filterData();
+    // }, [date, searchText, tag, seatFilter])
+
+    React.useEffect(() =>{
+        console.log('z1 page ' , page);
+        fetchEvents();
+    },[page])
 
     return (
         <div className={styles.container}>
@@ -74,7 +88,7 @@ function Home() {
             <div className={styles.mainBody}>
                 <div className={styles.eventDetails}>
                     <PerfectScrollbar>
-                        <Events loading={loading} date={date} filteredData={filteredData} />
+                        <Events count={count} page={page} setPage={setPage} loading={loading} date={date} filteredData={data} />
                     </PerfectScrollbar>
                 </div>
                 <div className={styles.calendar}>

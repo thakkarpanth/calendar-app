@@ -2,7 +2,7 @@
 /* .react-calendar__month-view__days__day--weekend {
     color : black !important;
 } */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .highlight {
     border-radius: 100% !important;
@@ -16,6 +16,9 @@
     border-color: black !important;
   }
 
+ body{
+    font-family: 'Inter', sans-serif !important; 
+} 
 /* .normal {
     height: 35px !important;
     width: 35px !important;

@@ -1,8 +1,9 @@
 .container {
-    background-color: white;
     padding-left: 84px;
     padding-right: 84px;
     padding-top : 42px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .mainBody{
@@ -11,7 +12,7 @@
 }
 
 .eventDetails{
-    width: 75%;
+    width: 66%;
     min-height: 85vh;
     max-height: 85vh;
     overflow-y: auto;
@@ -19,7 +20,7 @@
 }
 
 .calendar{
-    width: 25%;
+    width: 33%;
     min-height: 85vh;
     max-height: 85vh;
     /* max-width: 400px; */

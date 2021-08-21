@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './events.module.css'
 import moment from 'moment'
-import { Skeleton } from 'antd'
+import { Skeleton , Spin} from 'antd'
 
 
 const Card = (props) => {
@@ -32,6 +32,7 @@ const Card = (props) => {
 
 function Events(props) {
     let groupBy = {};
+    console.log('z1 props data ' , props.filteredData);
     props.filteredData.map(event => {
         if (groupBy[event.date])
             groupBy[event.date].push(event);
@@ -39,10 +40,23 @@ function Events(props) {
             groupBy[event.date] = [event];
         }
     })
+    const observer = React.useRef();
+    const lastEventElement = React.useCallback(node => {
+        if (props.loading) return;
+        if (observer.current) observer.current.disconnect();
+        observer.current = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && (props.filteredData.length < props.count)) {
+                console.log('!!!!!!!!!!!!!!!!!!!', props.filteredData.length , props.count);
+                props.setPage(props.page + 1);
+            }
+        })
+        if (node) observer.current.observe(node);
+    }, [props.loading, props.filteredData.length])
+
     return (
         <div>
             {
-                props.loading ?
+                props.loading && props.page === 0?
                     <>
                         <Skeleton.Input style={{ width: 200, height: 15 }} />
                         <div style={{ display: 'flex', alignItems: 'center', marginTop: '24px' }}>
@@ -63,14 +77,19 @@ function Events(props) {
                         </div>
                     </> :
                     <>
-                        {(Object.keys(groupBy).length === 0 || (Object.keys(groupBy).length && moment(Object.keys(groupBy)[0], 'DD-MM-YYYY').format('LL') !== moment(props.date, 'DD-MM-YYYY').format('LL'))) ? <div className={styles.noEvent}>No sessions scheduled for {moment(props.date, 'DD-MM-YYYY').format('LL')}</div> : null}
+                        {(Object.keys(groupBy).length === 0 || (Object.keys(groupBy).length && moment(Object.keys(groupBy)[0], 'DD-MM-YYYY').format('LL') !== moment(props.date, 'DD-MM-YYYY').format('LL'))) ? <div className={styles.noEvent}>No sessions scheduled for  {moment(props.date, 'DD-MM-YYYY').format('dddd')} <br />{moment(props.date, 'DD-MM-YYYY').format('LL')}</div> : null}
                         {
                             Object.keys(groupBy).map((key, index) => {
                                 return (
                                     <>
-                                        <div style={index === 0 ? {} : { marginTop: '36px' }} className={styles.dateHeader}>{moment(key, 'DD-MM-YYYY').format('LL')}</div>
+                                        <div style={index === 0 ? {} : { marginTop: '48px' }} className={styles.dateHeader}>{moment(key, 'DD-MM-YYYY').format('ddd') + ', '}{moment(key, 'DD-MM-YYYY').format('LL').split(',')[0]}</div>
                                         {
-                                            groupBy[key].map(event => <Card event={event} key={event.id} />)
+                                            groupBy[key].map((event, eventIndex) => {
+                                                if (groupBy[key].length === eventIndex + 1 && Object.keys(groupBy).length === index + 1) {
+                                                    return <div ref={lastEventElement}><Card event={event} key={event.id} /></div>
+                                                }
+                                                return <div><Card event={event} key={event.id} /></div>
+                                            })
                                         }
                                     </>
                                 )
@@ -78,6 +97,7 @@ function Events(props) {
                         }
                     </>
             }
+            {props.loading && props.page >0 ? <Spin /> : null}
 
         </div>
     )

@@ -9,10 +9,12 @@
     border: 1px solid #EAEAEA;
     display: flex;
     width: 240px;
+    height: 40px;
 }
 
 .buttonsWrapper{
     display: flex;
+    max-height: 32px;
 }
 
 .input{
