@@ -1,0 +1,11 @@
+.searchWrapper{
+    border-radius : 20px ;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    width: 240px;
+    height: 40px;
+}
+
+.input{
+    text-decoration: none;
+}

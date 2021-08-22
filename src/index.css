@@ -1,7 +1,4 @@
 
-/* .react-calendar__month-view__days__day--weekend {
-    color : black !important;
-} */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .highlight {
@@ -20,12 +17,5 @@
     font-family: 'Inter', sans-serif !important; 
     max-height: 100vh;
     overflow: hidden;
+    /* background-color: black; */
 } 
-/* .normal {
-    height: 35px !important;
-    width: 35px !important;
-    background-color: red !important;
-    border-radius: 100% !important;
-    border: 1px solid #BFBFBF !important;
-    display: block !important;
-} */

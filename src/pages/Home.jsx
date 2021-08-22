@@ -85,7 +85,6 @@ function Home() {
                                 if (eventDate === moment(date).format("DD-MM-YYYY")) {
                                     return 'highlight'
                                 }
-                                // return 'normal'
                             }
 
                         }}
