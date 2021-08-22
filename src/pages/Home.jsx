@@ -9,12 +9,11 @@ import moment from 'moment'
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
-
 function Home() {
+    
     const [tag, setTag] = React.useState('');
     const [searchText, setSearchText] = React.useState('');
     const [seatFilter, setSeatFilter] = React.useState([]);
-    // const [filteredData, setFilteredData] = React.useState([]);
     const [date, setDate] = React.useState(new Date());
     const [eventDates, setEventDates] = React.useState([]);
     const [loading , setLoading] = React.useState(false);
@@ -52,33 +51,19 @@ function Home() {
         }
     }
 
-    // const filterData = async () => {
-    //     setLoading(true); 
-    //     const timeStamp = moment(new Date(date).toISOString()).unix();
-    //     let tempData = data.filter(event => ((date ? moment(event.date, 'DD-MM-YYYY').unix() >= timeStamp : true)  && (seatFilter.length === 0 ? true : seatFilter.includes(event.status)) && (tag ? event.category === tag : true)));
-    //     setFilteredData(tempData);
-    //     setLoading(false);
-    // }
 
     React.useEffect(()=>{
         fetchEvents(0);
         setPage(0); 
     }, [date, searchText, tag, seatFilter])
 
-    // React.useEffect(()=>{
-    //     filterData();
-    // },[data])
 
     React.useEffect(()=>{
         getDates();
     },[])
 
-    // React.useEffect(() => {
-    //     filterData();
-    // }, [date, searchText, tag, seatFilter])
 
     React.useEffect(() =>{
-        console.log('z1 page ' , page);
         fetchEvents();
     },[page])
 

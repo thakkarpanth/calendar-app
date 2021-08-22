@@ -18,6 +18,8 @@
 
  body{
     font-family: 'Inter', sans-serif !important; 
+    max-height: 100vh;
+    overflow: hidden;
 } 
 /* .normal {
     height: 35px !important;

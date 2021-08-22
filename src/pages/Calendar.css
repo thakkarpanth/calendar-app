@@ -127,8 +127,8 @@
 }
 .react-calendar__tile--now:enabled:hover,
 .react-calendar__tile--now:enabled:focus {
-  background: black;
-  color: white;
+  /* background: black; */
+  /* color: white; */
   border-radius: 50%;
 }
 .react-calendar__tile--hasActive {

@@ -1,22 +1,22 @@
 import React from 'react'
 import styles from './header.module.css'
 import { Input, Menu, Dropdown, Checkbox } from 'antd';
+import debounce from "lodash.debounce";
 import 'antd/dist/antd.css'
 
 
 function Header(props) {
 
     const [showMenu, setShowMenu] = React.useState(false);
-    const [localFilters , setLocalFilters] = React.useState([]);
+    const [localFilters, setLocalFilters] = React.useState([]);
 
     const handleTagChange = (tag) => {
         if (props.tag === tag) props.setTag('');
         else props.setTag(tag);
     }
 
-    const handleSearch = (e) => {
-        props.setSearchText(e.target.value);
-    }
+    const debouncedSearch =
+        debounce(e => props.setSearchText(e.target.value), 500);
 
     const saveFilters = () => {
         props.setSeatFilter(localFilters);
@@ -27,46 +27,47 @@ function Header(props) {
         setLocalFilters([]);
     }
 
-    React.useEffect(()=>{
-        if(showMenu)
+    React.useEffect(() => {
+        if (showMenu)
             setLocalFilters(props.seatFilter);
-    } , [showMenu])
+    }, [showMenu])
+    
     const menu = (
-        <Menu style={{ width: '200px' }}>
+        <Menu style={{ width: '240px', borderRadius: '8px' }}>
             <Checkbox.Group
                 value={localFilters}
-                onChange={(e) =>{
+                onChange={(e) => {
                     setLocalFilters(e);
                 }}
             >
                 <Menu.Item key="0" className={styles.modifiedItem}>
                     <div className={styles.menuItem}>
-                        <img style={{ marginRight: '12px' }} src="icons/orangeDot.svg" alt="" />
-                        <div style={{flexGrow: 1}}>Filling Fast</div>
-                        <Checkbox  value={'Filling Fast'}></Checkbox>
+                        <img style={{ margin: '0 12px' }} src="icons/orangeDot.svg" alt="" />
+                        <div style={{ flexGrow: 1 }}>Filling Fast</div>
+                        <Checkbox style={{ marginRight: '12px' }} value={'Filling Fast'}></Checkbox>
                     </div>
                 </Menu.Item>
                 <Menu.Item key="1" className={styles.modifiedItem}>
                     <div className={styles.menuItem}>
-                        <img style={{ marginRight: '12px' }} src="icons/blueDot.svg" alt="" />
-                        <div style={{flexGrow: 1}}>Available</div>
-                        <Checkbox value={'Available'}></Checkbox>
+                        <img style={{ margin: '0 12px' }} src="icons/blueDot.svg" alt="" />
+                        <div style={{ flexGrow: 1 }}>Available</div>
+                        <Checkbox style={{ marginRight: '12px' }} value={'Available'}></Checkbox>
                     </div>
                 </Menu.Item>
                 <Menu.Item key="2" className={styles.modifiedItem}>
                     <div className={styles.menuItem}>
-                        <img style={{ marginRight: '12px' }} src="icons/grayDot.svg" alt="" />
-                        <div style={{flexGrow: 1}}>Block</div>
-                        <Checkbox value={'Block'}></Checkbox>
+                        <img style={{ margin: '0 12px' }} src="icons/grayDot.svg" alt="" />
+                        <div style={{ flexGrow: 1 }}>Block</div>
+                        <Checkbox style={{ marginRight: '12px' }} value={'Block'}></Checkbox>
                     </div>
                 </Menu.Item>
             </Checkbox.Group>
             <Menu.Divider />
             <Menu.Item key="3" className={styles.modifiedItem}>
-                <div className={styles.menuItem}>
-                    <div onClick={clearFilters} style={{ cursor: 'pointer' }}>Clear</div>
+                <div className={styles.menuItem}  >
+                    <div onClick={clearFilters} style={{ marginLeft: '12px', cursor: 'pointer' }}>Clear</div>
                     <div style={{ flexGrow: 1 }}></div>
-                    <div style={{ color: 'white' }} onClick={saveFilters} className={styles.saveButton}>Save</div>
+                    <div style={{ marginRight: '12px', color: 'white' }} onClick={saveFilters} className={styles.saveButton}>Save</div>
                 </div>
             </Menu.Item>
         </Menu>
@@ -89,7 +90,7 @@ function Header(props) {
 
             <div className={styles.searchWrapper}>
                 <img style={{ paddingLeft: '10px' }} src="icons/searchIcon.svg" alt="" />
-                <Input onChange={handleSearch} bordered={false} placeholder="Search" />
+                <Input onChange={debouncedSearch} bordered={false} placeholder="Search" />
             </div>
         </div>
     )

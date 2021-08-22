@@ -2,7 +2,7 @@
         {
             "id" : 1,
             "author": "Khoi Vinh",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Khoi Vinh",
@@ -10,13 +10,14 @@
             "date" : "04-08-2021",
             "registered" : false,
             "status" : "Filling Fast",
-            "img" : "icons/author1.svg"
+            "img" : "icons/author1.svg",
+            "duration" : "45 mins"
         },
         {
 
             "id" : 2,
             "author": "Panth Thakkar",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Panth Thakkar",
@@ -24,14 +25,15 @@
             "date" : "13-08-2021",   
             "registered" : true,
             "status" : "Available",
-            "img" : "icons/author2.svg"
+            "img" : "icons/author2.svg",
+            "duration" : "30 mins"
 
         },
         {
 
             "id" : 3,
             "author": "Raj Shah ",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 33,
             "title" : "Artisanal Intelligence by Raj Shah",
@@ -39,14 +41,15 @@
             "date" : "13-08-2021" ,
             "registered" : false,
             "status" : "Block",
-            "img" : "icons/author3.svg"
+            "img" : "icons/author3.svg",
+            "duration" : "1 hour 45 mins"
 
         },
         {
 
             "id" : 4,
             "author": "Bhavin Patel",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Bhavin",
@@ -54,14 +57,15 @@
             "date" : "14-08-2021" ,
             "registered" : true,
             "status" : "Filling Fast",
-            "img" : "icons/author4.svg"
+            "img" : "icons/author4.svg",
+            "duration" : "1 hour 30 mins"
 
         },
         
         {
             "id" : 5,
             "author": "Zankrut Thakkar",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Zankrut",
@@ -69,13 +73,14 @@
             "date" : "15-08-2021" ,
             "registered" : false,
             "status" : "Available",
-            "img" : "icons/author5.svg"
+            "img" : "icons/author5.svg",
+            "duration" : "45 mins"
 
         },
         {
             "id" : 6,
             "author": "Pujan Lalpurwala",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Pujan ",
@@ -83,13 +88,14 @@
             "date" : "16-08-2021",
             "registered" : true,
             "status" : "Block",
-            "img" : "icons/author6.svg"
+            "img" : "icons/author6.svg",
+            "duration" : "1 hour"
             
         },
         {
             "id" : 7,
             "author": "Jay Luhar",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 3,
             "title" : "Artisanal Intelligence by Jay Luhar",
@@ -97,13 +103,14 @@
             "date" : "17-08-2021",
             "registered" : false,
             "status" : "Filling Fast",
-            "img" : "icons/author1.svg"
+            "img" : "icons/author1.svg",
+            "duration" : "2 hours"
 
         },
         {
             "id" : 8,
             "author": "Semal Serathia",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 133,
             "title" : "Artisanal Intelligence by Semal Serathia",
@@ -111,12 +118,13 @@
             "date" : "18-08-2021" ,
             "registered" : true,
             "status" : "Available",
-            "img" : "icons/author2.svg"
+            "img" : "icons/author2.svg",
+            "duration" : "1 hour 15 mins"
         },
         {
             "id" : 9,
             "author": "Kartik Prajapati",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 6,
             "title" : "Artisanal Intelligence by Kartik Prajapati",
@@ -124,12 +132,13 @@
             "date" : "19-08-2021" ,
             "registered" : false,
             "status" : "Block",
-            "img" : "icons/author3.svg"
+            "img" : "icons/author3.svg",
+            "duration" : "45 mins"
         },
         {
             "id" : 10,
             "author": "Aneri Shah",
-            "timings": "8:30PM - 9:30 PM IST  •  45 mins",
+            "timings": "8:30PM - 9:30 PM IST",
             "attending": "112 attending",
             "seatsLeft": 6,
             "title" : "Artisanal Intelligence by Aneri Shah",
@@ -137,6 +146,7 @@
             "date" : "19-07-2021" ,
             "registered" : false,
             "status" : "Block",
-            "img" : "icons/author4.svg"
+            "img" : "icons/author4.svg",
+            "duration" : "45 mins"
         }
     ]
